@@ -1,0 +1,17 @@
+version: '3'
+services:
+  simulator:
+    build: ./simulator
+    ports:
+      - "11111:11111"
+    restart: on-failure:5
+  skmdb:
+    build: ./db
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: skm
+      MYSQL_DATABASE: skmdb
+      MYSQL_USER: skm
+      MYSQL_PASSWORD: skm

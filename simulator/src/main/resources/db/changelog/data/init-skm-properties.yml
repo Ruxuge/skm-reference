@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id:  2020_12_19-insert-initial-skm-properties
+      author:  FilipWerra
+      changes:
+        - insert:
+            tableName: skmInfo
+            columns:
+              - column:
+                  name: numberOfTrains
+                  value: 6
+              - column:
+                  name: numberOfCompartments
+                  value: 12
+              - column:
+                  name: compartmentCapacity
+                  value: 96
