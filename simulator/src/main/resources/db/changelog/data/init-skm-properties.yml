@@ -15,3 +15,15 @@ databaseChangeLog:
               - column:
                   name: compartmentCapacity
                   value: 96
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: "user"
+              - column:
+                  name: password
+                  value: "password"
+              - column:
+                  name: authorities
+                  value: "ROLE_ADMIN"
